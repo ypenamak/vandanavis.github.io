@@ -5,7 +5,7 @@ h2 {
 
 #map{
     width: 55%;
-    height: 80%;
+    height: 55%;
     border: 1px solid grey;
     display: table;
     float: left;
@@ -79,7 +79,7 @@ div.tooltip2 {
 
 #timelineGraph{
     width: 40%;
-    height: 80%;
+    height: 40%;
     border: 1px solid grey;
     float: right;
     display: block;
