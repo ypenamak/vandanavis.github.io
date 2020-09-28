@@ -1,0 +1,32 @@
+References.txt
+https://medium.com/@kj_schmidt/show-data-on-mouse-over-with-d3-js-3bf598ff8fc2
+
+References for Donut Chart:
+            https://observablehq.com/@d3/gallery
+            https://www.d3-graph-gallery.com/graph/donut_label.html
+            https://bl.ocks.org/laxmikanta415/dc33fe11344bf5568918ba690743e06f
+For a C you need:
+
+Completed - A well drawn map of the area (streets and pumps) including the locations of the deaths 
+Completed - a timeline graph showing the number of deaths per day
+Completed - ability to move the mouse over the timeline graph to choose which day to visualize 
+Completed - this should affect the deaths visible on the map and in the graph 
+Completed - at minimum all cholera deaths prior to that date should be shown on the map and the graph
+Completed - the graph and the map should be stable (i.e., they should not move when new data is added or removed)
+Completed - the graph and the map should be well labeled
+- you should check your visualization with a color blindness simulation tool to see that its OK
+Completed - the map and graph should update quickly when the user interacts
+- an about screen with details on who wrote the project, where the data came from, etc.
+
+For a B you need to add:
+
+Completed - more data to the map - major street names and the location of the brewery and the work house
+Completed - ability to easily see on the map whether each victim was male or female
+ability to easily see on the map the age of each victim
+additional graphs showing the distribution of deaths by sex and age overall
+
+For an A you need to add:
+
+ability to cluster the data on the map into a grid that shows the number of dead in each grid cell (even with this small amount of data the points are starting to overwhelm) and the user should be able to vary the size of the clusters.
+ability to show data from a window of days on the timeline graph
+ability to zoom in/out and pan around the map
