@@ -156,7 +156,7 @@ svg {
 
   
 path { 
-    stroke: rgb(243, 117, 59);
+    stroke: #b10026;
     stroke-width: 2;
     fill: none;
 }
@@ -175,7 +175,7 @@ path {
 }
 
 .line:hover, .pathBase:hover {
-    stroke: rgb(240, 3, 3);
+    stroke:#fb6a4a;
     opacity: 1;
 }
 
@@ -188,10 +188,10 @@ path {
 
 /* timeline specific CSS */
 circle{
-    fill: #21245F;
+    fill: #238b45;
 }
 circle:hover {
-    fill: #F35037;
+    fill: #df65b0;
 }
 .CircleLight{
     fill: #666699;

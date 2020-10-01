@@ -64,8 +64,9 @@ function plotWorkHouse()
         .attr("id","workhouse")
         .enter()
         .append('rect')
-        .style('fill', '#BF110C')
-        .style('stroke', '#004d4d')
+        .style('fill', '#238b45')
+        .style('stroke', 'black')
+        .style('stroke-width','0.1')
         .attr('x', function(d) { return d.x*scalingValue ; })
         .attr('y', function(d) { return d.y*scalingValue  ; })
         .attr("transform","rotate(-26,"+11*scalingValue+","+13*scalingValue+")")
@@ -173,9 +174,9 @@ function plotPumps(pumps){
 		.data(pumps)
 		.enter().append("circle")
 		.style("opacity", 1)
-		.style("stroke-width", "1.2")
-        .style("stroke", "#0B6C6C")
-		.style("fill","#E48A1D")
+		.style("stroke-width", "0.5")
+        .style("stroke", "black")
+		.style("fill","#4a1486")
 		.attr("r",8)
 		.attr("cx",function(e){return e.x *scalingValue})
         .attr("cy",function(e){return height- e.y *scalingValue})
@@ -209,14 +210,16 @@ d3.csv("pumps.csv",function(error,pumps){
 			
 });
 
+//Function for marking brewery
 function plotBrewery(){
     map.selectAll('ellipse')
         .data(brewery)
     	.enter()
         .append('ellipse')
         .attr("class","brewery")
-    	.style('fill', '#38EF54')
-    	.style('stroke', '#004d4d')
+    	.style('fill', '#74c476')
+        .style('stroke', 'black')
+        .style('stroke-width',"0.1")
         .attr('rx', 12)
         .attr('ry',15)
     	.attr('cx', function(f) { return f.x*scalingValue ; })
@@ -242,7 +245,7 @@ plotBrewery()
 
 
 /*---------- Plot Deaths ----------*/
-
+//plot deaths based on graph interaction
 function plotDeaths(selecteddate){
     if(selecteddate){
         DeathsToPlot = DeathsAgeSex.filter(function(d,i){
@@ -258,16 +261,17 @@ function plotDeaths(selecteddate){
     			.enter()
     			.append('circle')
     			.attr('class', 'deaths')
-    			.attr('r', 3.5)
+    			.attr('r', 2)
     			.attr('cx', function(d) { return d.x*scalingValue; })
                 .attr('cy', function(d) { return height- d.y*scalingValue; })
                 .attr("transform", "translate(0, 300)")
-    			.style('stroke','lightgrey')
+                .style('stroke','lightgrey')
+                .style('stroke-width','0.1')
     			.style('fill', function(d){
     				if (d.gender == 0){
-    			 	    return "#EE27BE"
+    			 	    return "#fd8d3c"
     				}else {
-    				    return "#43BEE6" 
+    				    return "#b10026" 
     				}})
     			.on("mouseover", function(d,i) {
     				d3.select(this).moveToFront();
@@ -295,16 +299,17 @@ function plotDeaths(selecteddate){
     	.enter()
     	.append('circle')
     	.attr('class', 'deaths')
-    	.attr('r', 3.5)
+    	.attr('r', 2)
     	.attr('cx', function(d) { return d.x*scalingValue; })
         .attr('cy', function(d) { return height- d.y*scalingValue; })
         .attr("transform", "translate(0, 300)")
-    	.style('stroke','black')
+        .style('stroke','black')
+        .style('stroke-width','0.1')
     	.style('fill', function(d){
     	    if (d.gender == 0){
-    			return "#EE27BE"
+    			return "#fd8d3c"
     		}else {
-    			return "#43BEE6" 
+    			return "#b10026" 
     	}})
     	.on("mouseover", function(d,i) {
     		d3.select(this).moveToFront();
@@ -432,7 +437,7 @@ d3.csv("deathdays.csv",function(error,deathDays,i){
     timelineGraph.selectAll("dot")	
                 .data(deathDays)	
   		        .enter().append("circle")								
-                .attr("r", 4.5)	
+                .attr("r", 4)	
                 .attr("cx", function(d) { return x_date(d.date); })		 
                 .attr("cy", function(d) { return y_death(d.deaths); })	
                 .on("mouseover", function(d,i) {	
