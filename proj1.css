@@ -15,7 +15,7 @@ h2 {
 
 div.tooltip {	
     z-index: 9999;
-    position: relative;			
+    position: absolute;			
     text-align: center;			
     width: 100px;					
     height: 46px;					
@@ -229,7 +229,28 @@ circle:hover {
 .barlabel {
     font-family: "ff-nuvo-sc-web-pro-1","ff-nuvo-sc-web-pro-2", sans-serif;
     font-size:11px;
-} 
+}
+
+.ResetButton{
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;cursor: pointer;
+    float: center;
+}
+
+.ResetButton:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 
 

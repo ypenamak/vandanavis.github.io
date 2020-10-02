@@ -374,6 +374,7 @@ d3.csv("deaths_age_sex.csv",function(error,d){
     plotDeaths();
 
 });
+
 		
 /* Plot a graph of Deaths and their time line */
 
@@ -437,7 +438,7 @@ d3.csv("deathdays.csv",function(error,deathDays,i){
     timelineGraph.selectAll("dot")	
                 .data(deathDays)	
   		        .enter().append("circle")								
-                .attr("r", 4)	
+                .attr("r", 5)	
                 .attr("cx", function(d) { return x_date(d.date); })		 
                 .attr("cy", function(d) { return y_death(d.deaths); })	
                 .on("mouseover", function(d,i) {	
@@ -445,11 +446,11 @@ d3.csv("deathdays.csv",function(error,deathDays,i){
                     div.transition()		
                         .duration(200)		
                         .style("opacity", .9);		
-                    div	.html(formatTime(d.date) + "<br/> <b>Deaths:</b>"  + d.deaths +  "<br/> <b>Total Deaths:</b>" +totalDeaths[i] )	
+                    div.html(formatTime(d.date) + "<br/> <b>Deaths:</b>"  + d.deaths +  "<br/> <b>Total Deaths:</b>" +totalDeaths[i] )	
                 .style("left", (d3.event.pageX) + "px")		
                 .style("top", (d3.event.pageY - 28) + "px");	
                 })	
-                .on("click", function(d,i) {
+                .on("mousemove", function(d,i) {
 			        //draw_totaldeaths(totalDeaths[i]);
                     console.log("Total deaths on clicked Date is :"+totalDeaths[i]);
                     console.log("active date = "+selecteddate);
