@@ -4,7 +4,7 @@
 	<head>
 	<title>Vandana's Project 1</title>
 	<h2>Interactive Map of John Snow's London's 1854 Cholera Epidemic</h2>
-
+		
 		<!-- Importing D3 version 3 -->
 		<script src="https://d3js.org/d3.v3.min.js"></script>	
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -16,8 +16,23 @@
 	</head>
 	
     <body> 	
-		
-        <div id="map" height="400"> 
+		<button onclick="window.location.href = 'about.html';" class = "DocButton">Document</button>
+        <div id="map" height="400">
+			<!-- data labels table -->
+			<table id ="t1" style="width:70%" >
+				<tr>
+				<th><svg width="10" height="10">  <rect x="0" y="0" width="50" height="50" fill="#4a1486" /> </svg></th>
+				<th>Pumps</th>
+				<th> <svg width="10" height="10">  <rect x="0" y="0" width="50" height="50" fill="#b10026" /> </svg></th>
+				<th>Female Deaths</th>
+				<th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" fill="#fd8d3c" /> </svg></th>
+				<th>Male Deaths</th>
+				<th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" stroke ="black"  stroke-width="1"  fill="#74c476"   /> </svg></th>
+				<th>Brewery</th>
+				<th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" stroke ="black"  stroke-width="1"  fill="#238b45"   /> </svg></th>
+				<th>Workhouse</th>
+				</tr>
+			</table> 
 			<button onclick = "plotDeaths()" class="ResetButton">Reset Map</button>
 			<script src="proj1js.js"></script>		
 		</div>
