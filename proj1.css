@@ -11,6 +11,7 @@ h2 {
     float: left;
     position: static;
     z-index: -1;
+    
 }
 
 div.tooltip {	
@@ -42,7 +43,7 @@ div.tooltip2 {
 }
 
 .street{
-    stroke:#C5C1BF;
+    stroke:#615e5e;
     stroke-width:2px;
     fill:none;
   }
@@ -147,7 +148,7 @@ h2 {
 }
   
 p {
-    color: #808080;
+    color: black;
 }
   
 svg {
@@ -231,7 +232,7 @@ circle:hover {
     font-size:11px;
 }
 
-.ResetButton{
+Button{
     border: none;
     color: white;
     padding: 8px 8px;
@@ -244,38 +245,22 @@ circle:hover {
     color: black;
     border: 2px solid #4CAF50;cursor: pointer;
     float: right;
+    font-weight: bold;
 }
 
-.ResetButton:hover {
+Button:hover {
     background-color: #4CAF50;
     color: white;
   }
 
-.DocButton{
-    border: none;
-    color: white;
-    padding: 8px 8px;
-    text-align: center;
-    text-decoration: none;    
-    font-size: 12px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;cursor: pointer;
-    float: right;
-}
-
-.DocButton:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
 
 #t1 th{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 11px;
-    font-weight: normal;
+    font-size: 12px;
+    font-weight: bold;
 }
+
+
 
 
 
