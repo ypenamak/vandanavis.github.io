@@ -17,63 +17,67 @@
     
     <div class="content" align="left">
         <p><font size="4"><b><u>Introduction:</b></u></font><p>
-        <p>Hi, I am Yamini Sri Vandana Penamakuru and I have created this project for my course H517: "Visualization Design, Analysis, & Evaluation" at IUPUI, lectured by Dr. Khairi Reda. 
+        <p>Hi, I am Yamini Sri Vandana Penamakuru and I have created this project for my course H517: "Visualization Design, Analysis, & Evaluation" at IUPUI, instructed by Dr. Khairi Reda. 
             The objective of this project is to recreate Dr. John Snow's map using today's tools of trade (D3, to be specific). 
             In addition to recreating the original map in an interactive version, 
             I have to add additional charts to the side of the map, as well as interface elements to make the data more interactive.
             I was provided with several data files. These include a vector map of the area and the locations of the victims 
-            and a set of dates reflecting the number of victims relative to the beginning of the epidemic.</p> 
+            and a set of dates reflecting the number of victims relative to the beginning of the epidemic.</p>
+        <p>Here is the Wikipedia link to John Snow's Map: <a href="https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak" target="_blank">London's 1854 cholera epidemic</a></p> 
         
         <p><font size="4"><b>Design Process:</b></font><p>
-        <p><b>How did you go about designing the visualization?</b></p>    
+        <p><b>How did I go about designing the visualization?</b></p>    
         <p>● Firstly, I tried to understand the data that was given to me which includes streets.json, pumps.csv, deaths_age_sex.csv and deathdays.csv</p>
         <p>● Next I started to plan and figure out how to handle the data given and planned on how to layout my designs.</p>
         <p>● Since I am very new to D3JS, HTML, CSS, Java Script. I did a lot of research and watched a lot of training videos.</p>
         <p>● I did spend a lot of time understanding how to process JSON and CSV files using d3js.</p>
-        <p><b>What are some of the initial designs / ideas you attempted in the beginning?</b></p>
-        <p>● Once I got a grip of how to handle the data given, I started to look for the sample visualizations that fit my needs at "https://d3js.org/" and "https://www.d3-graph-gallery.com/"</p>
-        <p>● With the help of these sample tutorials and documentations. I started my sketches on how and where what should be placed and came up with these below designs.</p> 
+        <p><b>What are some of the initial designs / ideas I attempted in the beginning?</b></p>
+        <p>● Once I got a grip of how to handle the data given, I started to look for the sample visualizations that fit my needs at <a href="https://d3js.org/" target="_blank">D3JS.ORG</a> and <a href="https://www.d3-graph-gallery.com/" target="_blank">D3 Graph Gallery</a></p>
+        <p>● With the help of these sample tutorials and documentations. I started my sketches on how and where the given data should be placed and came up with the below designs.</p> 
         <br>
-        <img src="epi4.jpg" alt="Fig: design process" style="width:400px;height:220px;">
-        <img src="epi3.jpg" alt="Fig: design process" style="width:400px;height:220px;">
-                
+        <img src="InteractiveMapSketch.jpeg" alt="Fig: design process" style="width:400px;height:220px;">
+        <img src="DonutChartSketch.jpeg" alt="Fig: design process" style="width:400px;height:220px;">
+        <img src="BarChartSketch.jpeg" alt="Fig: design process" style="width:400px;height:220px;">
+               
         <p>● After having my sketches sorted out. I first started to plot Streets on SVG and added some css to create some look and feel.</p>
         <p>● Once my Map with Streets looked good, I started to plot pumps on the map by appending the pump coordinates to SVG.</p>
-        <p>● Then I went on with labeling Street Names, Highlighting Work House and Brewery.</p>
+        <p>● Then I went on with labeling Street names, highlighting <i>Work House</i> and <i>Brewery</i>.</p>
         <p>● After that I went ahead with plotting all the deaths on the Map.</p>
-        <p>● Next big thing I wanted to do is to have a Graph that shows the all the deaths per day from Aug 19th to Sep 29th of 1854.</p>
+        <p>● Next big thing I wanted to do is to have a graph that shows deaths per day from Aug 19th to Sep 29th of 1854.</p>
         <p>● Once the Graph came into shape, I wanted an interaction between Graph and Map.</p>
-        <p>● This interactions works, when ever your mouse hovers on a Day on Graph you will see all the deaths until that day on the map</p>
-        <p>● I also had a Reset button to reset all the deaths on the map.</p>
+        <p>● This interaction works when ever your mouse hovers on a point on Graph. You will see all the deaths from starting day (Aug-19-1854) until the selected day on the graph</p>
+        <p>● I also created a Reset button which resets the map to show all the deaths.</p>
+        <h1></br>Additional Visualizations</h1>
+        <div id="barchart">
+            <iframe src ="GenderBarChart.html"   width="100%" height="500" ></iframe>
+        </div>
+        <div id="donutchart">
+            <iframe src ="AgeGroupsDonutChart.html" width="100%" height="500"></iframe>
+        </div> 
         
         <br>        
         <p><font size="4"><u><b>Design Choices:</b></u></font><p>
-        <p>● Since this is a re creation of John Snow's Map using modern tools I wanted it to look Simple, Modern, Clean and Clear.</p>
+        <p>● Since this is a recreation of John Snow's Map using modern tools I wanted it to look simple, modern, clean and clear.</p>
         <p>● I wanted to use all kinds of styles as much as possible to make this look and feel possible.</p>
         <p>● I also wanted to use hover affects, shades, color codes, click effects.</p>
-        <p>● I added buttons for resetting the map and going to Documentation and coming back to Visualization. These buttons have hover effect, click effect and color coding.</p>
-        <p>● Just my hovering on a particular day circle on the graph will show all the deaths till that date immediately on the map.</p>
+        <p>● I added buttons for resetting the map and going to the Documentation and coming back to Visualization. These buttons have hover effect, click effect and color coding.</p>
+        <p>● Just by hovering on a particular day circle on the graph, it will show all the deaths till that date immediately on the map.</p>
         <p>● This hovering will give color effects that will make you easily understand what changes are going on.</p>
-        <p>● I have selected all my colors after checking them with color blindness simulation tool to make sure they are ok.</p>
-        <p>● I initially used on click action for Graph to show the interaction but then I wanted it to be more easy for the user so changed it to mousemove action.</p>
+        <p>● I have selected all my colors after checking them with color blindness simulation tool to make sure they are ok. I used <i>ColorBrewer</i> for this purpose</p>
+        <p>● I initially used on click action for Graph to show the interaction but then I wanted it to be more easy for the user, so, I changed it to mousemove action.</p>
         
-        <p><b>why did you use color to encode a particular variable?</b></p>
-        <p>● I have used a dark color purple to show pumps, Orange shade for Male and Red shade for female.</p>
-        <p>● Streets are Grey shade and Background is White shade to make it look simple and clear.</p>
-        <p>● I used White, Green and Black border for buttons to show hover affect, click aeffect.</p>
-        <p>● Selecting a particular day also have a color effect that shows the selection</p>
-        <p>● I also used Light and dark green to show Work house and Brewery.</p>
-        <p><b>Why did you arrange your charts in a particular way?</b></p>
+        <p><b>Why did I use color to encode a particular variable?</b></p>
+        <p>● All the colors selected for this visualization are color-blind safe and the choices are made with the help of <i>ColorBrewer</i>>.
+        <p>● I have used a dark purple to show pumps, Orange shade for Male and Red shade for female.</p>
+        <p>● Streets are Grey and Background is White to make it look simple and clear.</p>
+        <p>● I used White, Green and Black border for buttons to show hover affect and click effect.</p>
+        <p>● Selecting a particular day also has a color effect that shows the selection</p>
+        <p>● I used Light and dark green to show Work house and Brewery.</p>
+        <p><b>Why did I arrange my charts in a particular way?</b></p>
         <p>● I have placed Map on the left and Graph on the right to make interactions easy and user friendly and clearly visible.</p>
         <p>● I placed a button on the top to navigate to Documentation page.</p>
         <p>● Documentation page contains detailed description, Youtube Demonstration Video and Additional Graphs and Visualizations.</p>
-        <p>● I placed another button to go back to visualization.</p>
-
-        <br>
-        <p><font size="4"><u><b>Observations:</b></u></font><p>
-        <p>● I have observered that the deaths of male and female are almost equal. So, immunity is not gender biased.</p>
-        <p>● Most of the deaths are occured for age group 80 years and above. Therefore people of this age is mostly effected with the disease.</p>
-        <p>● Form the line graph, most of the deaths are occured in the time period between 26 August to 5 september. Among all the days september 2nd has highest number of deaths.</p>
+        <p>● I placed another button on the Documentation page to return back to visualization.</p>
         
     </div>
 
@@ -82,12 +86,14 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VJ86D_DtyWg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     
-    <h1></br>Additional Visualizations</h1>
-    <div id="barchart">
-        <iframe src ="GenderBarChart.html"   width="100%" height="500" ></iframe>
-    </div>
-    <div id="donutchart">
-        <iframe src ="AgeGroupsDonutChart.html" width="100%" height="500"></iframe>
+    
+    <div>
+        <br>
+        <p><font size="4"><u><b>Observations:</b></u></font><p>
+        <p>● I have observered that the deaths of male and female are almost equal. So, immunity is not gender biased.</p>
+        <p>● Most of the deaths are occured for age group 80 years and above. Therefore people of this age is mostly effected with the disease.</p>
+        <p>● Form the line graph, most of the deaths are occured in the time period between 26 August to 5 september. Among all the days september 2nd has highest number of deaths.</p>
+        
     </div>
 
 </body>

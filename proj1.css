@@ -150,6 +150,9 @@ h2 {
 p {
     color: black;
 }
+img{
+    border: #2E2E31 solid;
+}
   
 svg {
     background-color: white;
