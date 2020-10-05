@@ -18,7 +18,23 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         </style>
-    <h3>Donut Chart - Age Groups Representation</h3>    
+    <h3>Donut Chart - Age Groups Representation</h3>
+    <table id ="t2" style="width:100%; font-size:11px; font-weight: normal;" >
+        <tr>           
+        <th> <svg width="10" height="10">  <rect x="0" y="0" width="50" height="50" fill="#ffffcc" /> </svg></th>
+        <th>25.04%</th>
+        <th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" fill="#c7e9b4" /> </svg></th>
+        <th>8.40%</th>
+        <th><svg width="10" height="10">  <rect x="0" y="0" width="50" height="50" fill="#7fcdbb" /> </svg></th>
+        <th>10.15%</th>
+        <th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" fill="#41b6c4"   /> </svg></th>
+        <th>9.98%</th>
+        <th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" fill="#2c7fb8"   /> </svg></th>
+        <th>15.93%</th>
+        <th> <svg width="10" height="10"><rect x="0" y="0" width="50" height="50" fill="#253494"   /> </svg></th>
+        <th>30.47%</th>        
+        </tr>
+    </table>     
     <!-- Create a div where the graph will take place -->
     <div id="donut"></div>
 </head>
@@ -93,7 +109,7 @@
     var color = d3.scaleOrdinal()
                 .domain(["a", "b", "c", "d", "e", "f"])
                 //.range(d3.schemeDark2)
-                .range(["#225ea8","#ffffd9","#41b6c4","#edf8b1","#1d91c0","#0c2c84"]);
+                .range(["#ffffcc","#c7e9b4","#7fcdbb","#41b6c4","#2c7fb8","#253494"]);
 
     // Compute the position of each group on the pie:
     var pie = d3.pie()
