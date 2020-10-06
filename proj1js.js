@@ -479,7 +479,7 @@ d3.csv("deathdays.csv",function(error,deathDays,i){
 	.attr("transform", "translate(" + (width1/2) + ")")
 	.style("font", "18px Segoe UI")
     .style("text-anchor", "middle")
-    .text("Interactive Timeline Graph of Death's");
+    .text("Interactive Timeline Graph of Deaths");
       
       
     //  label for  X axis
@@ -504,7 +504,7 @@ d3.csv("deathdays.csv",function(error,deathDays,i){
       .attr("dy", "1em")
       .style("font", "16px Segoe UI")
       .style("text-anchor", "middle")
-      .text("Number of Death's");      
+      .text("Number of Deaths");      
 
 
 });
