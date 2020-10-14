@@ -5,3 +5,27 @@ References for Donut Chart:
             https://observablehq.com/@d3/gallery
             https://www.d3-graph-gallery.com/graph/donut_label.html
             https://bl.ocks.org/laxmikanta415/dc33fe11344bf5568918ba690743e06f
+            
+References for Line Chart:
+https://www.d3-graph-gallery.com/graph/line_basic.html
+
+Tool Tip Ref:
+https://bl.ocks.org/sarubenfeld/56dc691df199b4055d90e66b9d5fc0d2
+
+Pan and Zoom:
+https://bl.ocks.org/sgruhier/50990c01fe5b6993e82b8994951e23d0
+
+Data Loading in D3js
+https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js
+
+Basic Shapes:
+https://www.dashingd3js.com/svg-basic-shapes-and-d3js
+
+Bar Chart:
+https://plotly.com/javascript/bar-charts/
+
+Color Brewer:
+https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
+
+CSS and Buttons:
+https://www.w3schools.com/css/css3_buttons.asp
